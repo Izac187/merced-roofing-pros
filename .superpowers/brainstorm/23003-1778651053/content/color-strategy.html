@@ -1,0 +1,71 @@
+<h2>Color Strategy Across 5 Sites</h2>
+<p class="subtitle">Each site shares the Split Hero layout and Live Result calculator — but should the colors vary by niche or stay consistent?</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Niche-Specific Colors</h3>
+      <p>Each site gets its own color palette matched to the trade. Roofing = earthy brown/orange. HVAC = cool blue. Plumbing = navy. Tree Service = forest green. Fence = warm grey/wood tone. Feels purpose-built, not copy-pasted.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#b45309;"></div> Roofing
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#0369a1;"></div> HVAC
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#1e40af;"></div> Plumbing
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#15803d;"></div> Tree Service
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#78716c;"></div> Fence
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>One Trust Color (Recommended)</h3>
+      <p>All 5 sites use the same primary color — a professional dark navy or slate blue — with accents that vary slightly per niche. One Tailwind config to maintain, one design system to learn. Visitors don't see multiple sites anyway.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#1e3a5f;"></div> All sites
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#f97316;"></div> CTA accent
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Shared Base + Niche Accent</h3>
+      <p>Navy/dark base on every site for trust. One niche-specific accent color per site (button, highlight, calculator result). Best of both: consistent to build, distinct enough to look purpose-built per trade.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#1e3a5f;"></div> Base (all)
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#b45309;"></div> Roofing accent
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#0369a1;"></div> HVAC accent
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:11px;">
+          <div style="width:14px;height:14px;border-radius:3px;background:#15803d;"></div> Tree accent
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px;">Pick one — this locks the Tailwind config pattern for the template.</p>

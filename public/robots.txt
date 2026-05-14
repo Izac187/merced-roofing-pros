@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://merced-roofing-pros.com
+
+# Sitemaps
+Sitemap: https://merced-roofing-pros.com/sitemap.xml
