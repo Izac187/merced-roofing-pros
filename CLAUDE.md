@@ -56,7 +56,8 @@ Key routing rules:
 - Health check: https://merced-roofing-pros.vercel.app
 
 ### Notes
-- GitHub repo: create with `gh repo create merced-roofing-pros --public --source=. --remote=origin --push`
-- Update Production URL and Health check above once Vercel assigns the final subdomain
-- Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL
-- Custom domain: add in Vercel → Domains when ready; update URLs in this config
+- GitHub repo: https://github.com/Izac187/merced-roofing-pros (live, pushing to main)
+- Vercel project: izac187s-projects/merced-roofing-pros (deployed 2026-05-13)
+- GitHub → Vercel auto-deploy: connect manually in Vercel dashboard → Settings → Git (CLI connection failed but direct deploy worked)
+- Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL (contact form email delivery)
+- Custom domain: add in Vercel → Domains when ready; update Production URL and Health check above
