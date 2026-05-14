@@ -39,3 +39,24 @@ Key routing rules:
 - Review what gstack has learned → invoke /learn
 - Tune question sensitivity → invoke /plan-tune
 - Code quality dashboard → invoke /health
+
+## Deploy Configuration (configured by /setup-deploy)
+- Platform: Vercel
+- Production URL: https://merced-roofing-pros.vercel.app
+- Deploy workflow: auto-deploy on push to main (GitHub → Vercel integration)
+- Deploy status command: HTTP health check
+- Merge method: squash
+- Project type: web app (Next.js 14)
+- Post-deploy health check: https://merced-roofing-pros.vercel.app
+
+### Custom deploy hooks
+- Pre-merge: npm run build
+- Deploy trigger: automatic on push to main
+- Deploy status: poll production URL
+- Health check: https://merced-roofing-pros.vercel.app
+
+### Notes
+- GitHub repo: create with `gh repo create merced-roofing-pros --public --source=. --remote=origin --push`
+- Update Production URL and Health check above once Vercel assigns the final subdomain
+- Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL
+- Custom domain: add in Vercel → Domains when ready; update URLs in this config
