@@ -61,3 +61,11 @@ Key routing rules:
 - GitHub → Vercel auto-deploy: connect manually in Vercel dashboard → Settings → Git (CLI connection failed but direct deploy worked)
 - Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL (contact form email delivery)
 - Custom domain: add in Vercel → Domains when ready; update Production URL and Health check above
+
+## Design System
+Always read DESIGN.md before making any visual or UI decisions.
+Fonts: Bebas Neue (display/headings) + DM Sans (body). Colors: tar black (#1A1208) dark surfaces, Merced ember (#E8521A) CTAs, bleached concrete (#F5ECD7) page background.
+Service cards use numbered style (01–04) — no icon tiles, no emoji anywhere.
+All nav links must scroll to in-page sections — no standalone About/Contact pages.
+Business hours (Mon–Sat, 7am–8pm) must appear everywhere the 30-min callback is mentioned.
+Do not deviate from DESIGN.md without explicit user approval. In QA mode, flag any code that doesn't match DESIGN.md.

@@ -19,16 +19,16 @@ export default function ServicesPage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {siteConfig.services.map((s) => (
+          {siteConfig.services.map((s, i) => (
             <div key={s.title} className="rounded-xl border border-gray-100 p-6 shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2 mb-3">
-                <span>{s.icon}</span> {s.title}
+                <span style={{ color: "var(--ember)", fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: "1.5rem" }}>0{i + 1}</span> {s.title}
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed">{s.description}</p>
               <a
-                href="/contact"
+                href="/#form"
                 className="inline-block mt-4 text-sm font-semibold underline"
-                style={{ color: "oklch(58% 0.15 38)" }}
+                style={{ color: "var(--ember)" }}
               >
                 Get a free estimate →
               </a>

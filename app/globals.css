@@ -3,25 +3,109 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Central Valley Direct — Design System Tokens ── */
+
+  /* Surfaces */
+  --bg:           #F5ECD7;   /* bleached concrete — page background */
+  --surface:      #FFFFFF;   /* cards, form */
+  --dark:         #1A1208;   /* tar black — hero, header, footer */
+  --dark-mid:     #2C1A0E;   /* deep adobe — trust bar */
+
+  /* Brand */
+  --ember:        #E8521A;   /* Merced ember — primary CTA, accent */
+  --ember-hover:  #C94210;
+  --gold:         #FF8C00;   /* price gold — stars, highlights */
+
+  /* Text */
+  --text:         #1A1208;
+  --muted:        #6B5F54;
+  --muted-light:  #9E8E82;
+
+  /* Borders */
+  --border:       #DDD0BF;
+
+  /* Semantic */
+  --success:      #166534;
+  --success-bg:   #DCFCE7;
+  --error:        #DC2626;
+
+  /* Radius */
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:    12px;
+  --radius-xl:    16px;
+
+  /* Layout */
+  --max-w:        1120px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    box-sizing: border-box;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus ring — ember colored, offset from element */
+  :focus-visible {
+    outline: 2px solid var(--ember);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Font families */
+  .font-display {
+    font-family: var(--font-bebas-neue), Impact, sans-serif;
+  }
+
+  .font-body {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+
+  /* Container */
+  .container-site {
+    max-width: var(--max-w);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Section eyebrow */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--ember);
+    flex-shrink: 0;
+  }
+
+  .eyebrow-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ember);
   }
 }

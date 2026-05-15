@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Barlow_Condensed } from "next/font/google";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Schema from "@/components/Schema";
 import { siteConfig } from "@/lib/config";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const barlowCondensed = Barlow_Condensed({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-barlow-condensed",
+  weight: "400",
+  variable: "--font-bebas-neue",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${barlowCondensed.variable}`}>
+    <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
       <head>
         <Schema />
       </head>
