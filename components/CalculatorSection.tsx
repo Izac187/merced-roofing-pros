@@ -48,8 +48,8 @@ export default function CalculatorSection() {
     >
       <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         <div>
-          <label style={labelStyle}>Roof Size</label>
-          <select value={roofSize} onChange={(e) => setRoofSize(e.target.value)} style={selectStyle}>
+          <label htmlFor="calc-roof-size" style={labelStyle}>Roof Size</label>
+          <select id="calc-roof-size" value={roofSize} onChange={(e) => setRoofSize(e.target.value)} style={selectStyle}>
             <option value="">Select size</option>
             {siteConfig.calculator.inputs[0].options.map((o) => (
               <option key={o.value} value={o.value}>{o.label}</option>
@@ -57,8 +57,8 @@ export default function CalculatorSection() {
           </select>
         </div>
         <div>
-          <label style={labelStyle}>Material</label>
-          <select value={material} onChange={(e) => setMaterial(e.target.value)} style={selectStyle}>
+          <label htmlFor="calc-material" style={labelStyle}>Material</label>
+          <select id="calc-material" value={material} onChange={(e) => setMaterial(e.target.value)} style={selectStyle}>
             <option value="">Select material</option>
             {siteConfig.calculator.inputs[1].options.map((o) => (
               <option key={o.value} value={o.value}>{o.label}</option>
@@ -66,8 +66,8 @@ export default function CalculatorSection() {
           </select>
         </div>
         <div>
-          <label style={labelStyle}>Condition</label>
-          <select value={condition} onChange={(e) => setCondition(e.target.value)} style={selectStyle}>
+          <label htmlFor="calc-condition" style={labelStyle}>Condition</label>
+          <select id="calc-condition" value={condition} onChange={(e) => setCondition(e.target.value)} style={selectStyle}>
             <option value="">Select condition</option>
             {siteConfig.calculator.inputs[2].options.map((o) => (
               <option key={o.value} value={o.value}>{o.label}</option>

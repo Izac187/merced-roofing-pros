@@ -11,7 +11,7 @@ const schema = z.object({
   phone: z
     .string()
     .min(10, "Enter a valid 10-digit phone number")
-    .regex(/^\D*(\d\D*){10,}$/, "Enter a valid phone number"),
+    .regex(/^[+]?1?[-.\s]?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/, "Enter a valid phone number"),
   service: z.string().optional(),
 });
 
@@ -123,8 +123,9 @@ export default function LeadForm({ compact = false, prefillService, source }: Le
           placeholder="John Smith"
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "lead-name-error" : undefined}
+          disabled={status === "sending"}
           {...register("name")}
-          style={inputStyle}
+          style={{ ...inputStyle, opacity: status === "sending" ? 0.6 : 1 }}
           onFocus={(e) => (e.currentTarget.style.borderColor = "var(--ember)")}
           onBlur={(e) => (e.currentTarget.style.borderColor = errors.name ? "var(--error)" : "var(--border)")}
         />
@@ -156,8 +157,9 @@ export default function LeadForm({ compact = false, prefillService, source }: Le
           placeholder="(209) 555-0100"
           aria-invalid={!!errors.phone}
           aria-describedby={errors.phone ? "lead-phone-error" : undefined}
+          disabled={status === "sending"}
           {...register("phone")}
-          style={inputStyle}
+          style={{ ...inputStyle, opacity: status === "sending" ? 0.6 : 1 }}
           onFocus={(e) => (e.currentTarget.style.borderColor = "var(--ember)")}
           onBlur={(e) => (e.currentTarget.style.borderColor = errors.phone ? "var(--error)" : "var(--border)")}
         />
@@ -185,8 +187,9 @@ export default function LeadForm({ compact = false, prefillService, source }: Le
           </label>
           <select
             id="lead-service"
+            disabled={status === "sending"}
             {...register("service")}
-            style={{ ...inputStyle, cursor: "pointer" }}
+            style={{ ...inputStyle, cursor: status === "sending" ? "not-allowed" : "pointer", opacity: status === "sending" ? 0.6 : 1 }}
             onFocus={(e) => (e.currentTarget.style.borderColor = "var(--ember)")}
             onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
           >
