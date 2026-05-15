@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     siteName: siteConfig.siteName,
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "fecb06293829c33b",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
