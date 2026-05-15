@@ -21,6 +21,8 @@ export default function SplitHero() {
         <style>{`
           @media (min-width: 800px) {
             .hero-grid { grid-template-columns: 1fr 420px !important; }
+            .hero-copy { order: 1 !important; }
+            .hero-form { order: 2 !important; }
           }
         `}</style>
 
@@ -33,8 +35,8 @@ export default function SplitHero() {
             alignItems: "center",
           }}
         >
-          {/* Left: copy */}
-          <div className="text-white" style={{ order: 2 }}>
+          {/* Left on desktop, below form on mobile */}
+          <div className="hero-copy text-white" style={{ order: 2 }}>
             {/* Eyebrow */}
             <div className="eyebrow" style={{ marginBottom: 20 }}>
               <span className="eyebrow-line" />
@@ -128,8 +130,9 @@ export default function SplitHero() {
             </a>
           </div>
 
-          {/* Right: form card */}
+          {/* Top on mobile, right on desktop */}
           <div
+            className="hero-form"
             style={{
               backgroundColor: "var(--surface)",
               borderRadius: "var(--radius-xl)",
