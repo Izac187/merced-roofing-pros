@@ -1,40 +1,74 @@
-import Link from "next/link";
+"use client";
+
 import { siteConfig } from "@/lib/config";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 px-4 py-3" style={{ backgroundColor: "oklch(28% 0.09 38)" }}>
-      <div className="max-w-5xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-white font-extrabold text-lg tracking-tight" style={{ fontFamily: "var(--font-barlow-condensed), sans-serif" }}>
-          {siteConfig.siteName}
-        </Link>
+    <header
+      className="sticky top-0 z-[100]"
+      style={{
+        backgroundColor: "var(--dark)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+      }}
+    >
+      <div className="container-site flex items-center justify-between h-16">
+        {/* Logo */}
+        <a href="#form" className="font-display text-2xl text-white leading-none">
+          MERCED <span style={{ color: "var(--ember)" }}>ROOFING</span> PROS
+        </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        {/* Nav — hidden on mobile */}
+        <nav className="hidden md:flex items-center gap-7">
           {[
-            { href: "/services", label: "Services" },
-            { href: "/calculator", label: "Estimate" },
-            { href: "/merced-roofing", label: "Merced" },
-            { href: "/about", label: "About" },
-            { href: "/contact", label: "Contact" },
+            { href: "#services", label: "Services" },
+            { href: "#estimate", label: "Estimate" },
+            { href: "#reviews", label: "Reviews" },
+            { href: "#faq", label: "FAQ" },
           ].map(({ href, label }) => (
-            <Link
+            <a
               key={href}
               href={href}
-              className="text-sm font-medium transition-colors hover:text-amber-400"
-              style={{ color: "oklch(85% 0.04 38)" }}
+              className="text-sm font-medium transition-colors duration-150"
+              style={{
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                color: "rgba(245,236,215,0.75)",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#F5ECD7")}
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "rgba(245,236,215,0.75)")
+              }
             >
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
 
-        <a
-          href={siteConfig.phoneHref}
-          className="rounded-lg py-2 px-4 text-sm font-bold text-white transition-colors"
-          style={{ backgroundColor: "oklch(72% 0.18 65)" }}
-        >
-          {siteConfig.phone}
-        </a>
+        {/* Right: phone + CTA */}
+        <div className="flex items-center gap-4">
+          <a
+            href={siteConfig.phoneHref}
+            className="hidden md:block font-display text-2xl text-white leading-none"
+            style={{ letterSpacing: "0.01em" }}
+          >
+            {siteConfig.phone}
+          </a>
+          <a
+            href="#form"
+            className="font-body font-bold text-sm text-white px-4 py-2 rounded-md transition-colors duration-150"
+            style={{
+              backgroundColor: "var(--ember)",
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = "var(--ember-hover)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = "var(--ember)")
+            }
+          >
+            Free Quote
+          </a>
+        </div>
       </div>
     </header>
   );

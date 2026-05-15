@@ -27,25 +27,21 @@ export const siteConfig = {
       title: "Roof Replacement",
       description:
         "Full tear-off and replacement using asphalt shingles, metal, or tile. Merced's summer heat demands materials rated for 110°F+.",
-      icon: "🏠",
     },
     {
       title: "Roof Repair",
       description:
         "Leak repair, storm damage, missing shingles, and flashing. Most repairs completed same or next day.",
-      icon: "🔧",
     },
     {
       title: "Roof Inspection",
       description:
         "Pre-purchase, post-storm, and annual maintenance inspections with written report.",
-      icon: "🔍",
     },
     {
       title: "Gutters & Drainage",
       description:
         "Gutter installation, cleaning, and downspout repair. Critical in Merced's rainy season.",
-      icon: "💧",
     },
   ],
 
@@ -114,10 +110,12 @@ export const siteConfig = {
     laborNote: "Estimates reflect Merced County labor rates, which run ~10% below Bay Area averages.",
   },
 
+  hours: "Mon–Sat, 7am–8pm",
+
   schema: {
     type: "RoofingContractor",
     priceRange: "$$",
-    hours: "Mo-Sa 07:00-19:00",
+    hours: "Mo-Sa 07:00-20:00",
   },
 
   seo: {
