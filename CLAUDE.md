@@ -62,6 +62,10 @@ Key routing rules:
 - Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL (contact form email delivery)
 - Custom domain: add in Vercel → Domains when ready; update Production URL and Health check above
 
+## Session Workflow
+- Start of session: run `/context-restore` to load last checkpoint
+- End of session: update `IMPLEMENTATION.md` (check off completed items, add session log row), then run `/context-save`
+
 ## Design System
 Always read DESIGN.md before making any visual or UI decisions.
 Fonts: Bebas Neue (display/headings) + DM Sans (body). Colors: tar black (#1A1208) dark surfaces, Merced ember (#E8521A) CTAs, bleached concrete (#F5ECD7) page background.
