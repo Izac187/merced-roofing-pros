@@ -42,25 +42,25 @@ Key routing rules:
 
 ## Deploy Configuration (configured by /setup-deploy)
 - Platform: Vercel
-- Production URL: https://merced-roofing-pros.vercel.app
+- Production URL: https://mercedroofingpro.com
 - Deploy workflow: auto-deploy on push to main (GitHub → Vercel integration)
 - Deploy status command: HTTP health check
 - Merge method: squash
 - Project type: web app (Next.js 14)
-- Post-deploy health check: https://merced-roofing-pros.vercel.app
+- Post-deploy health check: https://mercedroofingpro.com
 
 ### Custom deploy hooks
 - Pre-merge: npm run build
 - Deploy trigger: automatic on push to main
 - Deploy status: poll production URL
-- Health check: https://merced-roofing-pros.vercel.app
+- Health check: https://mercedroofingpro.com
 
 ### Notes
 - GitHub repo: https://github.com/Izac187/merced-roofing-pros (live, pushing to main)
 - Vercel project: izac187s-projects/merced-roofing-pros (deployed 2026-05-13)
 - GitHub → Vercel auto-deploy: connect manually in Vercel dashboard → Settings → Git (CLI connection failed but direct deploy worked)
-- Add env vars in Vercel dashboard: RESEND_API_KEY, LEAD_EMAIL (contact form email delivery)
-- Custom domain: add in Vercel → Domains when ready; update Production URL and Health check above
+- Env vars set via Vercel CLI: RESEND_API_KEY, LEAD_EMAIL (contact form email delivery)
+- Custom domain: mercedroofingpro.com live ✅ (Hostinger nameservers → ns1/ns2.vercel-dns.com, propagated 2026-05-16)
 
 ## Session Workflow
 - Start of session: run `/context-restore` to load last checkpoint
