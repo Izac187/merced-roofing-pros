@@ -9,8 +9,8 @@ export const siteConfig = {
   tagline: "Merced Roofing — Free Estimates · Licensed & Insured",
   description:
     "Licensed and insured roofing contractors serving Merced, CA. Free estimates, same-day response. Roof repair, replacement, and inspection.",
-  phone: "(209) 555-0100",
-  phoneHref: "tel:+12095550100",
+  phone: "(209) 259-0978",
+  phoneHref: "tel:+12092590978",
   email: "info@mercedroofingpro.com",
   domain: "mercedroofingpro.com",
 

@@ -4,10 +4,16 @@ export default function Schema() {
   const data = {
     "@context": "https://schema.org",
     "@type": siteConfig.schema.type,
+    "@id": `https://${siteConfig.domain}/#business`,
     name: siteConfig.siteName,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     url: `https://${siteConfig.domain}`,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 37.30216,
+      longitude: -120.48297,
+    },
     areaServed: siteConfig.serviceArea.map((name) => ({
       "@type": "City",
       name,
@@ -21,7 +27,14 @@ export default function Schema() {
       addressCountry: "US",
     },
     priceRange: siteConfig.schema.priceRange,
-    openingHours: siteConfig.schema.hours,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "07:00",
+        closes: "20:00",
+      },
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `${siteConfig.niche} Services`,
