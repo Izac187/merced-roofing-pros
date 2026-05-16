@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(apiKey);
 
   const { error } = await resend.emails.send({
-    from: `${siteConfig.siteName} <onboarding@resend.dev>`,
+    from: `${siteConfig.siteName} <noreply@mercedroofingpro.com>`,
     to: [process.env.LEAD_EMAIL ?? siteConfig.email],
     subject: `New Lead: ${name} — ${siteConfig.siteName}`,
     text: [
