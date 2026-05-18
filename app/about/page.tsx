@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `About Us | ${siteConfig.siteName}`,
+  title: `About Us`,
   description: `Licensed and insured roofing contractor serving Merced, CA. Free estimates, same-day response.`,
+  alternates: { canonical: `https://${siteConfig.domain}/about` },
 };
 
 export default function AboutPage() {

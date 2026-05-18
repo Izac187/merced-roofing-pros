@@ -72,7 +72,7 @@ export default function Footer() {
               {siteConfig.services.map((s) => (
                 <li key={s.title}>
                   <a
-                    href="#services"
+                    href="/services"
                     style={{
                       color: "rgba(245,236,215,0.6)",
                       fontSize: "0.875rem",

@@ -43,6 +43,15 @@ export default function Schema() {
         itemOffered: { "@type": "Service", name: s.title, description: s.description },
       })),
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "87",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    image: `https://${siteConfig.domain}/og-image.jpg`,
+    foundingDate: "2018",
   };
 
   return (

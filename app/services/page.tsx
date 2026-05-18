@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: `Roofing Services — ${siteConfig.city}, CA`,
   description: `Complete roofing services in ${siteConfig.city}, CA: repairs, replacement, inspection, and gutters. Licensed & insured.`,
+  alternates: { canonical: `https://${siteConfig.domain}/services` },
 };
 
 export default function ServicesPage() {

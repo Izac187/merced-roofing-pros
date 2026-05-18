@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(`https://${siteConfig.domain}`),
+  alternates: { canonical: `https://${siteConfig.domain}` },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,6 +36,11 @@ export const metadata: Metadata = {
   verification: {
     google: "fecb06293829c33b",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
