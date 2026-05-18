@@ -3,10 +3,8 @@ import LeadForm from "@/components/LeadForm";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `Contact`,
+  title: `Contact | ${siteConfig.siteName}`,
   description: `Contact ${siteConfig.siteName} for free roofing estimates in Merced, CA. Call or fill out the form.`,
-  alternates: { canonical: `https://${siteConfig.domain}/contact` },
-  robots: { index: false, follow: true },
 };
 
 export default function ContactPage() {
@@ -17,7 +15,7 @@ export default function ContactPage() {
           Contact Us
         </h1>
         <p className="text-gray-600 mb-8 text-sm">
-          Free estimates. We call back within 2 hours during business hours ({siteConfig.hours}).
+          Free estimates. We call back within 2 hours during business hours (Mon–Sat 7am–7pm).
         </p>
 
         <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm mb-6">

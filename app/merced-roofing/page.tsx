@@ -3,9 +3,8 @@ import LeadForm from "@/components/LeadForm";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `Roofing Contractor Merced CA`,
+  title: `Roofing Contractor Merced CA | ${siteConfig.siteName}`,
   description: `Local roofing contractor serving Merced, CA. Roof repair, replacement, and inspection. Free estimates, same-day response. Licensed & insured.`,
-  alternates: { canonical: `https://${siteConfig.domain}/merced-roofing` },
 };
 
 export default function MercedRoofingPage() {

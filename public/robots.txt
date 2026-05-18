@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mercedroofingpro.com
+Host: https://merced-roofing-pros.com
 
 # Sitemaps
-Sitemap: https://mercedroofingpro.com/sitemap.xml
+Sitemap: https://merced-roofing-pros.com/sitemap.xml

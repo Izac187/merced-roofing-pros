@@ -5,7 +5,6 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: `Roofing Cost Calculator — ${siteConfig.city}, CA`,
   description: `Get a localized roofing cost estimate for ${siteConfig.city}, CA. Prices reflect Merced County labor rates.`,
-  alternates: { canonical: `https://${siteConfig.domain}/calculator` },
 };
 
 export default function CalculatorPage() {
